@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "flash_alert.html" %}
+<div>
+	<div class="card" style="width: 500px; margin: 20px auto;">
+		<div class="row banner menu">
+			<div class="col-md-12 padding-none">
+				<h3 style="text-align: center;" >Edit Category {{category.name}}</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 padding-top">
+				<form action="{{ url_for('editCategory',category_id = category.id)}}"  method="post">
+					<div class="form-group">
+						<input type ="text" maxlength="50" class="form-control" name="name" value="{{category.name}}">
+						<div style="margin-top: 2rem; text-align: center;">
+							<button type="submit" id="submit">
+								<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+							</button>
+							<span class="vseperator"></span>
+							<a href = "{{ url_for('showCatalog') }}" class="glyphicon glyphicon-remove"></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</div>
+{% endblock %}

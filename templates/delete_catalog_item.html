@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+{% block content %}
+<h2 style="text-align: center;"> Are you sure you want to delete {{item.name}}? </h2>
+<form  method = 'post' style="text-align: center;">
+	<button type="submit" class="glyphicon glyphicon-trash" id="submit" type="submit"></button>
+	<span class="vseperator"></span>
+	<a href = "{{ url_for('showCatalog') }}" class="glyphicon glyphicon-remove"></a>
+</form>
+{% endblock %}

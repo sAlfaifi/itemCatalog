@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "flash_alert.html" %}
+<div>
+	<div class="card" style="width: 500px; margin: 20px auto;">
+		<div class="row banner menu">
+			<div>
+				<h3 style="text-align: center;">Add New Category</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 padding-top">
+				<form method="post">
+					<input type ="text" maxlength="50" class="form-control" name="name" placeholder="Name">
+
+					<div style="margin-top: 2rem; text-align: center;">
+						<button type="submit" id="submit">
+							<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+						</button>
+						<span class="vseperator"></span>
+						<a href = "{{ url_for('showCatalog') }}">
+							<span class="glyphicon glyphicon-remove " aria-hidden="true"></span>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "flash_alert.html" %}
+<div>
+	<div class="card" style="width: 500px; margin: 20px auto;">
+		<div>
+			<div>
+				<h3 style="text-align: center;">New Catalog Item</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 padding-top">
+				<form method = "post">
+					<div class="form-group" style="margin-top 20px;">
+						<label for="name">Category :</label>
+						{% include "category_form_list.html" %}
+
+						<input class="form-control" type ="text" maxlength="50" name="name" placeholder="Name" style="margin-top: 10px">
+
+						<textarea class="form-control" maxlength="250" rows="3" name="description" placeholder="Description" style="margin-top: 10px"></textarea>
+
+						<input type ="text" class="form-control" maxlength="10" name="price" placeholder="Price" style="margin-top: 10px"/>
+
+						<div style="margin-top: 2rem; text-align: center;">
+							<button type="submit" class="glyphicon glyphicon-ok" id="submit" type="submit"></button>
+							<span class="vseperator"></span>
+							<a href = "{{ url_for('showCatalog') }}" class="glyphicon glyphicon-remove"></a>
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

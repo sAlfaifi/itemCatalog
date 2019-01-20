@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+{% block content %}
+<h2 style="text-align: center;"> Are you sure you want to delete {{category.name}}? </h2>
+<form action="{{url_for('deleteCategory', category_id=category.id) }}" style="text-align: center;" method = 'post'>
+	<button type="submit" id="submit">
+		<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+	</button>
+	<span class="vseperator"></span>
+	<a href = "{{ url_for('showCatalog') }}" class="glyphicon glyphicon-remove"></a>
+
+</form>
+{% endblock %}
