@@ -523,4 +523,4 @@ def categoryItemValidation(request):
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
     app.debug = True
-    app.run(host='18.184.129.156', port=80)
+    app.run()
