@@ -23,7 +23,7 @@ CLIENT_ID = json.loads(
 
 
 # Connect to Database and create database session
-engine = create_engine('sqlite:///itemcatalog.db')
+engine = create_engine('postgresql://catalog:catalog123@18.184.129.156:80/itemcatalog')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
