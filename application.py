@@ -19,8 +19,7 @@ app = Flask(__name__)
 
 
 with app.open_resource('client_secrets.json') as f:
-    CLIENT_ID = json.loads(
-        open(f, 'r').read())['web']['client_id']
+    CLIENT_ID = json.loads(open(f).read())['web']['client_id']
 
 
 # Connect to Database and create database session
