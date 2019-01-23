@@ -18,7 +18,7 @@ import requests
 app = Flask(__name__)
 
 
-with app.open_resource('client_secrets.json') as f:
+with app.open_resource('client_secrets.json', 'r') as f:
     CLIENT_ID = json.load(f)['web']['client_id']
 
 
